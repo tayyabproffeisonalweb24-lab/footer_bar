@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Professional Footer</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #080c16;
+  --footer-bg: #0b101c;
+  --card-bg: #111827;
+  --gold: #e7bd68;
+  --gold-light: #f5d995;
+  --text: #f4f5f9;
+  --muted: #929caf;
+  --border: rgba(255,255,255,.10);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== DEMO CONTENT ===== */
+.demo-content {
+  min-height: 350px;
+  display: grid;
+  place-items: center;
+  padding: 35px 20px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top, #25203b, transparent 65%),
+    var(--bg);
+}
+
+.demo-content h1 {
+  font-size: clamp(30px, 5vw, 48px);
+  margin-bottom: 12px;
+}
+
+.demo-content h1 span {
+  color: var(--gold);
+}
+
+.demo-content p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  padding: 65px 22px 0;
+  background:
+    radial-gradient(ellipse at 15% 0%, #33281733, transparent 40%),
+    linear-gradient(145deg, #0d1422, #080c15);
+  border-top: 1px solid #e7bd6838;
+}
+
+/* Decorative glow */
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(
+    90deg, transparent, var(--gold), transparent
+  );
+  opacity: .7;
+}
+
+.footer-container {
+  max-width: 1180px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== TOP FOOTER GRID ===== */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.4fr;
+  gap: 42px;
+  padding-bottom: 45px;
+}
+
+/* ===== BRAND ===== */
+.footer-brand {
+  max-width: 300px;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 19px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  color: #171108;
+  background: linear-gradient(135deg, var(--gold-light), #bd8c32);
+  border-radius: 14px;
+  font-size: 21px;
+  box-shadow: 0 6px 22px #e7bd6822;
+}
+
+.brand-name {
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+}
+
+.brand-name span {
+  color: var(--gold);
+}
+
+.brand-description {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-link {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  color: #c5cddd;
+  background: #ffffff08;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  text-decoration: none;
+  transition: transform .25s, color .25s,
+              background .25s, border-color .25s;
+}
+
+.social-link:hover {
+  color: #171108;
+  background: var(--gold);
+  border-color: var(--gold);
+  transform: translateY(-5px);
+}
+
+/* ===== FOOTER COLUMNS ===== */
+.footer-column h3 {
+  position: relative;
+  font-size: 15px;
+  margin-bottom: 23px;
+  padding-bottom: 12px;
+}
+
+.footer-column h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 2px;
+  border-radius: 5px;
+  background: var(--gold);
+  transition: width .3s;
+}
+
+.footer-column:hover h3::after {
+  width: 65px;
+}
+
+.footer-links {
+  list-style: none;
+  display: grid;
+  gap: 15px;
+}
+
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+  transition: color .25s, transform .25s;
+}
+
+.footer-links a i {
+  color: #7d899e;
+  font-size: 11px;
+  transition: color .25s, transform .25s;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+  transform: translateX(5px);
+}
+
+.footer-links a:hover i {
+  color: var(--gold);
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter-description {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 17px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  background: #080d17;
+  border: 1px solid #ffffff17;
+  border-radius: 12px;
+  transition: border-color .25s, box-shadow .25s;
+}
+
+.newsletter-form:focus-within {
+  border-color: #e7bd6880;
+  box-shadow: 0 0 0 3px #e7bd6810;
+}
+
+.newsletter-form input {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 7px;
+  color: white;
+  background: transparent;
+  border: 0;
+  outline: none;
+  font-size: 12px;
+}
+
+.newsletter-form input::placeholder {
+  color: #7f8a9e;
+}
+
+.subscribe-button {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  color: #181208;
+  background: linear-gradient(135deg, var(--gold-light), #c99a40);
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.subscribe-button:hover {
+  transform: scale(1.06);
+  box-shadow: 0 4px 18px #e7bd6840;
+}
+
+.newsletter-message {
+  min-height: 18px;
+  margin-top: 10px;
+  color: var(--gold-light);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ===== CONTACT INFO ===== */
+.contact-info {
+  display: grid;
+  gap: 15px;
+  margin-top: 22px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.contact-item i {
+  margin-top: 3px;
+  color: var(--gold);
+}
+
+/* ===== FOOTER BOTTOM ===== */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 23px 0;
+  border-top: 1px solid var(--border);
+}
+
+.copyright {
+  color: #7f8a9d;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.copyright span {
+  color: var(--gold);
+}
+
+.bottom-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bottom-links a {
+  color: #8e99ad;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.bottom-links a:hover {
+  color: var(--gold);
+}
+
+.footer-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a8b5c8;
+  font-size: 11px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  background: #35d69b;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #35d69b88;
+}
+
+/* ===== BACK TO TOP ===== */
+.back-to-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 100;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  color: #171108;
+  background: linear-gradient(135deg, var(--gold-light), #c99a40);
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 7px 22px #0005;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity .25s, visibility .25s,
+              transform .25s, box-shadow .25s;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px #e7bd6840;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 950px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 38px 28px;
+  }
+
+  .footer-brand {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-footer {
+    padding: 45px 18px 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 32px;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .bottom-links {
+    gap: 14px;
+  }
+
+  .back-to-top {
+    right: 15px;
+    bottom: 15px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Demo page content -->
+<section class="demo-content">
+  <div>
+    <h1>Build Something <span>Beautiful</span></h1>
+    <p>Scroll down to explore the luxury footer component.</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER START ===== -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-grid">
+
+      <!-- Brand and social links -->
+      <div class="footer-brand">
+        <a href="#" class="brand-logo" aria-label="LuxeLearn home">
+          <span class="logo-icon">
+            <i class="fa-solid fa-gem"></i>
+          </span>
+          <span class="brand-name">Luxe<span>Learn</span></span>
+        </a>
+
+        <p class="brand-description">
+          A modern digital experience built for learning,
+          creativity and professional growth. Turn your ideas
+          into something extraordinary.
+        </p>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/" class="social-link"
+             aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/" class="social-link"
+             aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/" class="social-link"
+             aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.youtube.com/" class="social-link"
+             aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick navigation -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#home"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+          <li><a href="#about"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+          <li><a href="#courses"><i class="fa-solid fa-angle-right"></i> Our Courses</a></li>
+          <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Learning resources -->
+      <div class="footer-column">
+        <h3>Resources</h3>
+        <ul class="footer-links">
+          <li><a href="#blog"><i class="fa-solid fa-angle-right"></i> Blog & Articles</a></li>
+          <li><a href="#tutorials"><i class="fa-solid fa-angle-right"></i> Tutorials</a></li>
+          <li><a href="#community"><i class="fa-solid fa-angle-right"></i> Community</a></li>
+          <li><a href="#faq"><i class="fa-solid fa-angle-right"></i> FAQs</a></li>
+          <li><a href="#support"><i class="fa-solid fa-angle-right"></i> Help Center</a></li>
+        </ul>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fa-regular fa-envelope"></i>
+            <span>hello@example.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Your City, Your Country</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-column">
+        <h3>Stay Connected</h3>
+        <p class="newsletter-description">
+          Get the latest updates, learning resources and
+          exclusive announcements delivered to your inbox.
+        </p>
+
+        <form class="newsletter-form" id="newsletterForm">
+          <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email"
+            aria-label="Email address"
+            required>
+          <button type="submit" class="subscribe-button"
+                  aria-label="Subscribe">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+
+        <p class="newsletter-message" id="newsletterMessage"
+           aria-live="polite"></p>
+      </div>
+
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+      <p class="copyright">
+        © <span id="currentYear"></span>
+        <span>LuxeLearn</span>. All rights reserved.
+      </p>
+
+      <nav class="bottom-links" aria-label="Legal links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#cookies">Cookie Policy</a>
+      </nav>
+
+      <div class="footer-status">
+        <span class="status-dot"></span>
+        Designed with care
+      </div>
+    </div>
+
+  </div>
+</footer>
+<!-- ===== FOOTER END ===== -->
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop"
+        aria-label="Back to top" title="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script>
+/* ===== AUTOMATIC COPYRIGHT YEAR ===== */
+document.getElementById("currentYear").textContent =
+  new Date().getFullYear();
+
+/* ===== BACK TO TOP BUTTON ===== */
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  backToTop.classList.toggle("visible", window.scrollY > 250);
+}, { passive: true });
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ? "auto"
+      : "smooth"
+  });
+});
+
+/* ===== NEWSLETTER DEMO ===== */
+const newsletterForm = document.getElementById("newsletterForm");
+const newsletterEmail = document.getElementById("newsletterEmail");
+const newsletterMessage = document.getElementById("newsletterMessage");
+
+newsletterForm.addEventListener("submit", event => {
+  event.preventDefault();
+
+  if (!newsletterEmail.checkValidity()) {
+    newsletterEmail.reportValidity();
+    return;
+  }
+
+  /*
+    Front-end demonstration only.
+    Connect this form to your email marketing service or backend
+    to store subscriptions and send real emails.
+  */
+  newsletterMessage.textContent =
+    "Demo only: connect a newsletter service to complete subscription.";
+
+  newsletterForm.reset();
+});
+</script>
+
+</body>
+</html>
